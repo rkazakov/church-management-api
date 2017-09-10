@@ -1,0 +1,169 @@
+{
+	"variables": [],
+	"info": {
+		"name": "church-management-api",
+		"_postman_id": "4b9868de-320c-32ae-562d-059d214343d1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/users",
+			"request": {
+				"url": "http://localhost:4567/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/users",
+			"request": {
+				"url": "http://localhost:4567/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\": \"Ruslan\",\n\t\"lastname\": \"Kazakov\",\n\t\"username\":\"ruslan1\",\n\t\"email\": \"ruslan@gmail1.com\", \n\t\"password\":\"password1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/login",
+			"request": {
+				"url": "http://localhost:4567/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"ruslan\", \n\t\"password\": \"password1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/users/me",
+			"request": {
+				"url": "http://localhost:4567/users/ruslan",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"This is post example!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/members",
+			"request": {
+				"url": "http://localhost:4567/members",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWI0YjJmNjU2ZTk0NmY3MWFjNDA2ZGYiLCJpYXQiOjE1MDUwMTQ4NTMsImV4cCI6MTUwNTYxOTY1M30.NvSijtZhoSbHaQ7lDWott10nVWHDwYBu75YV3glIMzg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/members",
+			"request": {
+				"url": "http://localhost:4567/members",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWI0YjJmNjU2ZTk0NmY3MWFjNDA2ZGYiLCJpYXQiOjE1MDUwMTQ4NTMsImV4cCI6MTUwNTYxOTY1M30.NvSijtZhoSbHaQ7lDWott10nVWHDwYBu75YV3glIMzg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"Ruslan\", \n\t\"lastName\": \"Kazakov\", \n\t\"birthDate\":\"1985-06-15\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/posts",
+			"request": {
+				"url": "http://localhost:4567/posts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"This is post example!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/posts",
+			"request": {
+				"url": "http://localhost:4567/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWIxNTJhYWZjYTM0YjQzODMyZDk1N2EiLCJpYXQiOjE1MDQ3OTMyNTgsImV4cCI6MTUwNTM5ODA1OH0.vxszGj5y2qDxDgF1yD0l6plw7CSyYgc92SBr--5vlvY",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"This is post example!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
