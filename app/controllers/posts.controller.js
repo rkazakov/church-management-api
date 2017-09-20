@@ -7,7 +7,7 @@ class PostController extends BaseController {
     'text',
   ];
 
-   // Middleware to populate post based on url param
+   // middleware to populate post based on url param
   _populate = async (req, res, next) => {
     const { id } = req.params;
 

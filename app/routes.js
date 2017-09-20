@@ -4,6 +4,7 @@ import MetaController from './controllers/meta.controller';
 import AuthController from './controllers/auth.controller';
 import UsersController from './controllers/users.controller';
 import PostsController from './controllers/posts.controller';
+import MembersController from './controllers/members.controller';
 
 import authenticate from './middleware/authenticate';
 import accessControl from './middleware/access-control';
@@ -15,6 +16,10 @@ routes.get('/', MetaController.index);
 
 // authentication
 routes.post('/auth/login', AuthController.login);
+
+// members
+routes.get('/members', authenticate, MembersController.search);
+routes.post('/members', authenticate, MembersController.create);
 
 // users
 routes.get('/users', UsersController.search);
